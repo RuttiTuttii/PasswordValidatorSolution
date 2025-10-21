@@ -5530,11 +5530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
+      "projectUniqueName": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
       "projectName": "PasswordValidator.Tests",
-      "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
+      "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
       "packagesPath": "C:\\NugetCache\\Packages",
-      "outputPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator.Tests\\obj\\",
+      "outputPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5556,8 +5556,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj": {
-              "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj"
+            "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj": {
+              "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj"
             }
           }
         }

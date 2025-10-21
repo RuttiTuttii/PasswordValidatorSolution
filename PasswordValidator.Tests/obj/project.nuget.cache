@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3dmyMhfknJE=",
+  "dgSpecHash": "dDfOLXWp2x0=",
   "success": true,
-  "projectFilePath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
+  "projectFilePath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator.Tests\\PasswordValidator.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\NugetCache\\Packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\NugetCache\\Packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

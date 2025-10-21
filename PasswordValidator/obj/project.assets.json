@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj",
+      "projectUniqueName": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj",
       "projectName": "PasswordValidator",
-      "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj",
+      "projectPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator\\PasswordValidator.csproj",
       "packagesPath": "C:\\NugetCache\\Packages",
-      "outputPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidator\\obj\\",
+      "outputPath": "C:\\Temp\\ISPP-31\\PasswordValidatorSolution\\PasswordValidatorSolution\\PasswordValidator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
