@@ -8,7 +8,7 @@ namespace PasswordValidator.Tests
     public class PasswordValidatorTests
     {
         /// <summary>
-        /// Тестирование базовой валидации пароля
+        /// Тестирование базовой валидации пароля4
         /// </summary>
         public class BasicValidationTests
         {
