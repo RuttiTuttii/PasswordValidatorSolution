@@ -3,40 +3,40 @@ using Xunit;
 namespace PasswordValidator.Tests
 {
     /// <summary>
-    /// Тесты для валидатора паролей
+    /// РўРµСЃС‚С‹ РґР»СЏ РІР°Р»РёРґР°С‚РѕСЂР° РїР°СЂРѕР»РµР№
     /// </summary>
     public class PasswordValidatorTests
     {
         /// <summary>
-        /// Тестирование базовой валидации пароля
+        /// РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ Р±Р°Р·РѕРІРѕР№ РІР°Р»РёРґР°С†РёРё РїР°СЂРѕР»СЏ
         /// </summary>
         public class BasicValidationTests
         {
             [Theory]
-            [InlineData("Password1", true)]    // валидный пароль
-            [InlineData("Passw0rd", true)]     // валидный пароль
-            [InlineData("Test1234", true)]     // валидный пароль
+            [InlineData("Password1", true)]    // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
+            [InlineData("Passw0rd", true)]     // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
+            [InlineData("Test1234", true)]     // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
             public void Validate_ValidPassword_ReturnsTrue(string password, bool expected)
             {
                 // Act
                 var result = PasswordValidator.Validate(password);
-
+                
                 // Assert
                 Assert.Equal(expected, result);
             }
 
             [Theory]
-            [InlineData("short1", false)]      // меньше 8 символов
-            [InlineData("nopassword", false)]  // нет цифр
-            [InlineData("12345678", false)]    // нет букв
-            [InlineData("", false)]            // пустая строка
+            [InlineData("short1", false)]      // РјРµРЅСЊС€Рµ 8 СЃРёРјРІРѕР»РѕРІ
+            [InlineData("nopassword", false)]  // РЅРµС‚ С†РёС„СЂ
+            [InlineData("12345678", false)]    // РЅРµС‚ Р±СѓРєРІ
+            [InlineData("", false)]            // РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
             [InlineData(null, false)]          // null
-            [InlineData("паrol1", false)]      // не латинские буквы
+            [InlineData("РїР°rol1", false)]      // РЅРµ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹
             public void Validate_InvalidPassword_ReturnsFalse(string password, bool expected)
             {
                 // Act
                 var result = PasswordValidator.Validate(password);
-
+                
                 // Assert
                 Assert.Equal(expected, result);
             }
@@ -46,10 +46,10 @@ namespace PasswordValidator.Tests
             {
                 // Arrange
                 var password = "Abc12345";
-
+                
                 // Act
                 var result = PasswordValidator.Validate(password);
-
+                
                 // Assert
                 Assert.True(result);
             }
@@ -59,46 +59,46 @@ namespace PasswordValidator.Tests
             {
                 // Arrange
                 var password = "Abc1234";
-
+                
                 // Act
                 var result = PasswordValidator.Validate(password);
-
+                
                 // Assert
                 Assert.False(result);
             }
         }
 
         /// <summary>
-        /// Тестирование усовершенствованной валидации пароля
+        /// РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ СѓСЃРѕРІРµСЂС€РµРЅСЃС‚РІРѕРІР°РЅРЅРѕР№ РІР°Р»РёРґР°С†РёРё РїР°СЂРѕР»СЏ
         /// </summary>
         public class EnhancedValidationTests
         {
             [Theory]
-            [InlineData("Password1!", true)]           // валидный пароль
-            [InlineData("Test123$", true)]             // валидный пароль
-            [InlineData("Hello123@World", true)]       // валидный пароль
+            [InlineData("Password1!", true)]           // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
+            [InlineData("Test123$", true)]             // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
+            [InlineData("Hello123@World", true)]       // РІР°Р»РёРґРЅС‹Р№ РїР°СЂРѕР»СЊ
             public void ValidateEnhanced_ValidPassword_ReturnsTrue(string password, bool expected)
             {
                 // Act
                 var result = PasswordValidator.ValidateEnhanced(password);
-
+                
                 // Assert
                 Assert.Equal(expected, result);
             }
 
             [Theory]
-            [InlineData("password1!", false)]          // нет верхнего регистра
-            [InlineData("PASSWORD1!", false)]          // нет нижнего регистра
-            [InlineData("Password!", false)]           // нет цифр
-            [InlineData("Password1", false)]           // нет спецсимволов
-            [InlineData("Pass1!", false)]              // меньше 8 символов
-            [InlineData("", false)]                    // пустая строка
+            [InlineData("password1!", false)]          // РЅРµС‚ РІРµСЂС…РЅРµРіРѕ СЂРµРіРёСЃС‚СЂР°
+            [InlineData("PASSWORD1!", false)]          // РЅРµС‚ РЅРёР¶РЅРµРіРѕ СЂРµРіРёСЃС‚СЂР°
+            [InlineData("Password!", false)]           // РЅРµС‚ С†РёС„СЂ
+            [InlineData("Password1", false)]           // РЅРµС‚ СЃРїРµС†СЃРёРјРІРѕР»РѕРІ
+            [InlineData("Pass1!", false)]              // РјРµРЅСЊС€Рµ 8 СЃРёРјРІРѕР»РѕРІ
+            [InlineData("", false)]                    // РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
             [InlineData(null, false)]                  // null
             public void ValidateEnhanced_InvalidPassword_ReturnsFalse(string password, bool expected)
             {
                 // Act
                 var result = PasswordValidator.ValidateEnhanced(password);
-
+                
                 // Assert
                 Assert.Equal(expected, result);
             }
@@ -108,10 +108,10 @@ namespace PasswordValidator.Tests
             {
                 // Arrange
                 var password = "Test123!";
-
+                
                 // Act
                 var result = PasswordValidator.ValidateEnhanced(password);
-
+                
                 // Assert
                 Assert.True(result);
             }
@@ -121,10 +121,10 @@ namespace PasswordValidator.Tests
             {
                 // Arrange
                 var password = "Test1234";
-
+                
                 // Act
                 var result = PasswordValidator.ValidateEnhanced(password);
-
+                
                 // Assert
                 Assert.False(result);
             }
